@@ -8,6 +8,33 @@
 </head>
 <body>
 
+<% if notice %>
+<span><script type="text/javascript">
+  noty({text: '<%= notice %>', type: 'alert'});
+</script></span>
+
+<% end %>
+
+
+<% if alert %>
+<span>
+<script type="text/javascript">
+	noty({text: '<%= alert %>', type: 'error'});
+</script>
+</span>
+<% end %>
+
+
+
+
+<div class="container-narrow">
+  <div class="masthead">
+    <%= render 'layouts/user_header' %>
+   
+  </div>
+  <hr />
+
+</div>
 <%= yield %>
 
 </body>
