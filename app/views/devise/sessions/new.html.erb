@@ -5,7 +5,7 @@
     <%= f.email_field :email, :autofocus => true %>
     <%= f.password_field :password %>
     <% if devise_mapping.rememberable? -%>
-     <label><input type="radio" name="optradio"> <span style="padding:3px;">Remeber Me</span></label>
+     <label><input type="checkbox"> <span style="padding:3px;">Remeber Me</span></label>
     <% end %>
     <%= f.submit "Sign in",:class=>'btn btn-primary' %>
   <% end %>
