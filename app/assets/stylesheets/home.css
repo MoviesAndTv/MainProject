@@ -1,23 +1,4 @@
-<body>
-	<div class="header">
-		<div>
-			<div class="logo"><a href="/"><center><b>MoTv</b></center></a></div>
-		</div>
-			<div class="sign_in">
-				<a href="/users/sign_in"><button class="sign_in_button"><b>Sign in</b></button></a>
-			</div>
-	</div>
-
-	<div class="text">
-		<b>Get in Touch With Your Friends,Families!</b><br>
-		<em>Never Miss An Update.</em>
-	</div>
-	<div class="sign_up">
-		<a href="/users/sign_up"><button class="sign_up_button"><em><b>Start Your Journey</b></em></button></button>
-	</div>
-</body>
-<style>
-	body { 
+body { 
 		background-image:url('/bg1.jpg');
   		background-size:cover;
   		margin-top: 10px;
@@ -87,4 +68,3 @@
   	background:linear-gradient(rgba(76, 186, 219,0.9),rgba(76,186,219,0.2));
   	
   }
-</style>
