@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  content: MyText
+  rating: MyString
+  releasedate: MyString
+  duration: MyString
+  pgrating: MyString
+  coverpic: MyString
+  status: MyString
+  officialsite: MyString
+  language: MyString
+  type: 
+
+two:
+  name: MyString
+  content: MyText
+  rating: MyString
+  releasedate: MyString
+  duration: MyString
+  pgrating: MyString
+  coverpic: MyString
+  status: MyString
+  officialsite: MyString
+  language: MyString
+  type: 

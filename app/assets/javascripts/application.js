@@ -12,7 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.noty.packaged.min.js
-//= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
