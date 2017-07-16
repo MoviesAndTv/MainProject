@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   def index
-  	movie= Movie.all
+  	@upcomingmovie = Movie.first(4)
+    @trendingmovie = Movie.offset(4).first(4)
+    @myfavs = Movie.offset(4).last(4)
   end
 
   def genre
