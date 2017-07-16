@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/newdb'=>'home#newdb'
   get '/allmov'=>'home#allmov'
   get '/alltv'=>'home#alltv'
+  get '/genre' => 'users#genre'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
