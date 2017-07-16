@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'home/index'
+  root 'home#index'
   get '/dbcreate'=> 'movies#dbcreate'
    get '/ndbcreate'=> 'tvs#ndbcreate'
      get '/ntcreate'=> 'tvs#ntcreate'

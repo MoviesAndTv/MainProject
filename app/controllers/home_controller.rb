@@ -1,8 +1,6 @@
 class HomeController < ApplicationController
   def index
 
-# @client = NetflixRoulette::Client.new("Breaking Bad")
-byebug
 string=params['movie']
 movie=""
 if string
