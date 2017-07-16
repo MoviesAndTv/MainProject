@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <body>
 	<div class="header">
 		<div><br>
@@ -91,3 +92,123 @@
   	
   }
 </style>
+=======
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><b>MoTv Talks</b></a>
+    </div>
+</div>
+</nav>
+
+<div class="row sub-nav">
+	<div class="col-md-4"></div>
+	<div class="col-md-8">
+      <ul class="nav navbar-nav">
+      	<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Movies<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%=link_to 'Action',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Action' , :type => 'm') , method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Romance',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Romance' , :type => 'm'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Comedy',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Comedy' , :type => 'm'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Horror',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Horror' , :type => 'm'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Sci-Fi',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Sci-Fi' , :type => 'm'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Thriller',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Thriller' , :type => 'm'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Crime',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Crime' , :type => 'm'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Drama',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Drama' , :type => 'm'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Fantasy',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Fantasy' , :type => 'm'), method: :get%></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tv Series<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%=link_to 'Action',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Action' , :type => 't'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Comedy',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Comedy' , :type => 't'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Science-Fiction',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Science-Fiction' , :type => 't'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Thriller',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Thriller' , :type => 't'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Crime',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Crime' , :type => 't'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Fantasy',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Fantasy' , :type => 't'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Horror',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Horror' , :type => 't'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Romance',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Romance' , :type => 't'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Adventure',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Adventure' , :type => 't'), method: :get%></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Animes<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%=link_to 'Action',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Action' , :type => 'a'), method: :get%></a></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Horror',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Horror' , :type => 'a'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Supernatural',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Supernatural' , :type => 'a'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Fantasy',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Fantasy' , :type => 'a'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Thriller',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Triller' , :type => 'a'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Mystery',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Mystery' , :type => 'a'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Comedy',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Comedy' , :type => 'a'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Crime',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Crime' , :type => 'a'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'Romance',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Romance' , :type => 'a'), method: :get%></li>
+            <li role="separator" class="divider"></li>
+            <li><%=link_to 'War',url_for(:controller => 'users' , :action => 'genre' , :genre => 'War' , :type => 'a'), method: :get%></li>
+          </ul>
+        </li>
+      </ul>
+  </div>
+ </div>
+
+ <style>
+ 	.sub-nav{
+ 		background-color: lightgrey;
+ 		margin-top: -20px;
+ 	}
+ 	a{
+ 		font-weight: bold;
+ 	}
+ 	.sub-nav a{
+ 		font-size: 16px;
+ 	}
+ 	.sub-nav a:hover{
+ 		color:#1da2f9;
+ 	}
+ 	.sub-nav .dropdown-menu a{
+ 		font-size: 15px;
+ 	} 
+ </style>
+>>>>>>> 372edc72c55b80f4f311cf7e20d80614b70a2d78

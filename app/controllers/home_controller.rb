@@ -2,8 +2,6 @@ class HomeController < ApplicationController
   before_action :authenticate_user!
   def index
 
-# @client = NetflixRoulette::Client.new("Breaking Bad")
-byebug
 string=params['movie']
 movie=""
 if string
