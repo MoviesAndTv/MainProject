@@ -1,0 +1,93 @@
+<body>
+	<div class="header">
+		<div><br>
+			<div class="logo"><a href="/"><center><b>MoTv</b></center></a></div>
+		</div>
+			<div class="sign_in">
+				<a href="/users/sign_in"><button class="sign_in_button"><b>Sign in</b></button></a>
+			</div>
+   
+	</div>
+	<div class="text" style="margin-top: 6%;">
+		<b>Get in Touch With Others! </b><br><br>
+		<em>Never Miss An Update.</em>
+	</div>
+	<div class="sign_up">
+		<a href="/users/sign_up"><button class="sign_up_button"><em><b>Start Your Journey</b></em></button></button>
+	</div>
+</body>
+<style>
+	body {
+		height: 100vh;
+		width: 100vw; 
+		background-image:url('/download.jpg');
+  		background-size:cover;
+  		margin-top: 10px;
+  		overflow: hidden;
+  }
+  .header{
+  	display: flex;
+  	justify-content: space-between;
+  }
+  .sign_in_button{
+  	margin: 30px;
+  	background: transparent;
+  	width: 130px;
+  	height: 50px;
+  	border-radius: 50%;
+  	border: 2px solid white;
+  }
+  .sign_in_button:hover{
+  	background-color: white;
+  }
+  .sign_in_button b{
+  	color: white;
+  	font-size: 20px;
+  }
+  .sign_in_button:hover b{
+  	color: black;
+  }
+  .logo{
+  	margin: 20px;
+  	height: 120px;
+  	width: 120%;
+  	border: 2px solid white;
+  	border-radius: 20px;
+  	cursor:pointer;
+  }
+  .logo a{
+  	text-decoration: none;
+  	color: white;
+  }
+  .logo b{
+  	font-size: 90px;
+  }
+  .logo:hover{
+  	background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.7))
+  }
+  .text{
+  	margin: 50px;
+  	color:white;
+  }
+  .text b{
+  	font-size: 60px;
+  }
+  .text em{
+  	font-size:30px;
+  }
+  .sign_up_button{
+  	width:240px;
+  	height: 70px;
+  	background:linear-gradient(rgba(76, 186, 219,0.2),rgba(76,186,219,0.9));
+  	color: white;
+  	font-size: 20px;
+  	margin-left: 50px;
+  	margin-top: 10px;
+  	border:3px solid white;
+  	border-radius: 50%;
+  }
+  .sign_up_button:hover{
+  	background:linear-gradient(rgba(76, 186, 219,0.9),rgba(76,186,219,0.2));
+  	
+  }
+</style>

@@ -11,7 +11,67 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170716120125) do
+ActiveRecord::Schema.define(version: 20170716164633) do
+
+  create_table "movies", force: :cascade do |t|
+    t.string   "name"
+    t.text     "content"
+    t.string   "rating"
+    t.string   "releasedate"
+    t.string   "duration"
+    t.string   "pgrating"
+    t.string   "coverpic"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.text     "directors",   default: "--- []\n"
+    t.text     "writers",     default: "--- []\n"
+    t.text     "stars",       default: "--- []\n"
+    t.text     "genres"
+  end
+
+  create_table "n_tvs", force: :cascade do |t|
+    t.string   "name"
+    t.text     "content"
+    t.string   "rating"
+    t.string   "releasedate"
+    t.text     "genres"
+    t.string   "duration"
+    t.string   "pgrating"
+    t.string   "coverpic"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "new_tvs", force: :cascade do |t|
+    t.string   "name"
+    t.text     "content"
+    t.string   "rating"
+    t.string   "releasedate"
+    t.string   "duration"
+    t.string   "pgrating"
+    t.string   "coverpic"
+    t.string   "status"
+    t.string   "officialsite"
+    t.string   "language"
+    t.string   "type"
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.text     "genres",       default: "--- []\n"
+  end
+
+  create_table "tvs", force: :cascade do |t|
+    t.string   "name"
+    t.text     "content"
+    t.string   "rating"
+    t.string   "releasedate"
+    t.string   "duration"
+    t.string   "pgrating"
+    t.string   "coverpic"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "episodes"
+    t.text     "genres",      default: "--- []\n"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
