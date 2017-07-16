@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/index'
+
   get 'home/index'
   root 'home#index'
   get '/dbcreate'=> 'movies#dbcreate'
