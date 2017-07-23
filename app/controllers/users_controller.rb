@@ -18,9 +18,9 @@ class UsersController < ApplicationController
         mo.genres.gsub!(" ","")
         gen=mo.genres.split(',')  
 gen.each do |ger|
-  if ger=="Thriller"
+  if ger=="Crime"
 
-    actionmov=Thrillermov.new
+    actionmov=Crimemov.new
    
     actionmov.name=mo.name;
     actionmov.content=mo.content;
