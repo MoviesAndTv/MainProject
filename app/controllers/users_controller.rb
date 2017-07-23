@@ -8,35 +8,68 @@ class UsersController < ApplicationController
 
   def genre
 
+# d=0;
+#  movie=Fantasymov.all;
+#  movie.each do |mo|
+#   mo.id=d
+#   d=d+1
+#   mo.save
 
- movie=Movie.all;
- movie.each do |mo|
+#    mo.genres.gsub!("\"","")
+#         mo.genres.gsub!("[","")
+#         mo.genres.gsub!("]","")
+#         mo.genres.gsub!(" ","")
+#         gen=mo.genres.split(',')  
+# gen.each do |ger|
+#   if ger=="Thriller"
 
-   mo.genres.gsub!("\"","")
-        mo.genres.gsub!("[","")
-        mo.genres.gsub!("]","")
-        mo.genres.gsub!(" ","")
-        gen=mo.genres.split(',')  
-gen.each do |ger|
-  if ger=="Thriller"
-
-    actionmov=Thrillermov.new
+#     actionmov=Thrillermov.new
    
-    actionmov.name=mo.name;
-    actionmov.content=mo.content;
-    actionmov.rating=mo.rating;
-    actionmov.releasedate=mo.releasedate;
-    actionmov.duration=mo.duration;
-    actionmov.pgrating=mo.pgrating;
-    actionmov.coverpic=mo.coverpic;
-  actionmov.save
+#     actionmov.name=mo.name;
+#     actionmov.content=mo.content;
+#     actionmov.rating=mo.rating;
+#     actionmov.releasedate=mo.releasedate;
+#     actionmov.duration=mo.duration;
+#     actionmov.pgrating=mo.pgrating;
+#     actionmov.coverpic=mo.coverpic;
+#   actionmov.save
   
-end
-end
- end
+# end
+# end
 
-#   	genre=params["genre"]
-#   	tp=params["type"]
+@mov
+  	genre=params["genre"]
+  	tp=params["type"]
+    if (tp=='m')
+      if genre=="Action"
+@mov=Actionmov.all
+      end
+       if genre=="Comedy"
+@mov=Comedymov.all
+      end
+       if genre=="Thriller"
+@mov=Thrillermov.all
+      end
+       if genre=="Romance"
+@mov=Romancemov.all
+      end
+       if genre=="Sci-Fi"
+@mov=Scifimov.all
+      end
+        if genre=="Drama"
+@mov=Dramamov.all
+      end
+       if genre=="Horror"
+@mov=Horrormov.all
+      end
+       if genre=="Fantasy"
+@mov=Fantasymov.all
+      end
+
+   if genre=="Crime"
+@mov=Crimemov.all
+      end
+    end
 #     if(tp=='m')
 #   		@mov=[]
 #   		movie = Movie.pluck(:genres);
