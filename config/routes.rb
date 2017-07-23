@@ -1,15 +1,21 @@
 Rails.application.routes.draw do
+  devise_for :users
+  root to: 'home#index'
   get 'users/index'
-
+  
   get 'home/index'
-  root 'home#index'
+  
   get '/dbcreate'=> 'movies#dbcreate'
    get '/ndbcreate'=> 'tvs#ndbcreate'
      get '/ntcreate'=> 'tvs#ntcreate'
   get '/newdb'=>'home#newdb'
   get '/allmov'=>'home#allmov'
   get '/alltv'=>'home#alltv'
+ #post 'users/sign_in'=>'home#index'
+ # post 'users/sign_up'=>'devise/sessions#create'
+
   get '/genre' => 'users#genre'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

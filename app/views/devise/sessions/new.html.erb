@@ -1,0 +1,26 @@
+<body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<div class="border-form-div">
+  <h2>Sign in</h2>
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    <%= f.email_field :email, :autofocus => true,:placeholder => 'Email address' %>
+    <%= f.password_field :password ,:placeholder => 'Password'%>
+    <% if devise_mapping.rememberable? -%>
+      <div class="checkbox">
+  <label><input type="checkbox" >Remeber Me</label>
+</div>
+    <% end -%>
+    <%= f.submit "Sign in",:class=>'btn btn-primary' %>
+  <% end %>
+  <%= render "devise/shared/links" %>
+</div>
+</body>
+
+
+<style type="text/css">
+  
+body{
+  background: linear-gradient(90deg,#13547a ,#80d0c7);
+}
+
+</style>

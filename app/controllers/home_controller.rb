@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  
   def index
 
 string=params['movie']
