@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'followusers/index'
+
   devise_for :users
   root to: 'home#index'
   get 'users/index'
