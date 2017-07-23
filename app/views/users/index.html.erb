@@ -1,98 +1,4 @@
 
-<body>
-	<div class="header">
-		<div><br>
-			<div class="logo"><a href="/"><center><b>MoTv</b></center></a></div>
-		</div>
-			<div class="sign_in">
-				<a href="/users/sign_in"><button class="sign_in_button"><b>Sign in</b></button></a>
-			</div>
-   
-	</div>
-	<div class="text" style="margin-top: 6%;">
-		<b>Get in Touch With Others! </b><br><br>
-		<em>Never Miss An Update.</em>
-	</div>
-	<div class="sign_up">
-		<a href="/users/sign_up"><button class="sign_up_button"><em><b>Start Your Journey</b></em></button></button>
-	</div>
-</body>
-<style>
-	body {
-		height: 100vh;
-		width: 100vw; 
-		background-image:url('/download.jpg');
-  		background-size:cover;
-  		margin-top: 10px;
-  		overflow: hidden;
-  }
-  .header{
-  	display: flex;
-  	justify-content: space-between;
-  }
-  .sign_in_button{
-  	margin: 30px;
-  	background: transparent;
-  	width: 130px;
-  	height: 50px;
-  	border-radius: 50%;
-  	border: 2px solid white;
-  }
-  .sign_in_button:hover{
-  	background-color: white;
-  }
-  .sign_in_button b{
-  	color: white;
-  	font-size: 20px;
-  }
-  .sign_in_button:hover b{
-  	color: black;
-  }
-  .logo{
-  	margin: 20px;
-  	height: 120px;
-  	width: 120%;
-  	border: 2px solid white;
-  	border-radius: 20px;
-  	cursor:pointer;
-  }
-  .logo a{
-  	text-decoration: none;
-  	color: white;
-  }
-  .logo b{
-  	font-size: 90px;
-  }
-  .logo:hover{
-  	background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.7))
-  }
-  .text{
-  	margin: 50px;
-  	color:white;
-  }
-  .text b{
-  	font-size: 60px;
-  }
-  .text em{
-  	font-size:30px;
-  }
-  .sign_up_button{
-  	width:240px;
-  	height: 70px;
-  	background:linear-gradient(rgba(76, 186, 219,0.2),rgba(76,186,219,0.9));
-  	color: white;
-  	font-size: 20px;
-  	margin-left: 50px;
-  	margin-top: 10px;
-  	border:3px solid white;
-  	border-radius: 50%;
-  }
-  .sign_up_button:hover{
-  	background:linear-gradient(rgba(76, 186, 219,0.9),rgba(76,186,219,0.2));
-  	
-  }
-</style>
-=======
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -101,8 +7,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+<body style="overflow-x: hidden;">
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -112,7 +19,22 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><b>MoTv Talks</b></a>
+      <a class="navbar-brand" href="#"><b class="logo">MoTv Talks</b></a>
+     </div>
+      <ul class="nav navbar-nav pull-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="current_user">Ashish Chauhan<span><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Profile</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Settings</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </li>
+        <li><%=link_to "Sign out",destroy_user_session_path,method: :delete%></li>
+      </ul>
+
     </div>
 </div>
 </nav>
@@ -144,7 +66,7 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tv Series<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TV Series<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><%=link_to 'Action',url_for(:controller => 'users' , :action => 'genre' , :genre => 'Action' , :type => 't'), method: :get%></li>
             <li role="separator" class="divider"></li>
@@ -192,11 +114,78 @@
       </ul>
   </div>
  </div>
+<br>
+<div class="container container-fluid">
+<br>
+<div class="panel panel-info form-panel">
+	<div class="panel-heading ">
+		<center>UPCOMING</center>
+	</div>
+</div> 
 
- <style>
+ <div class="row">
+ 	 	<%@upcomingmovie.each do|movie|%>
+	 		<div class="col-md-3">
+	 			<img style="border: 4px solid white;" src="<%=movie.coverpic%>">
+	 		</div>
+	 	<% end %>
+ </div>
+<br>
+<div class="panel panel-info form-panel">
+	<div class="panel-heading ">
+		<center>TRENDING</center>
+	</div>
+</div> 
+
+ <div class="row">
+ 	 	<%@trendingmovie.each do|movie|%>
+	 		<div class="col-md-3">
+	 			<img style="border: 4px solid white;" src="<%=movie.coverpic%>"><br>
+	 		</div>
+	 	<% end %>
+ </div>
+
+<br>
+<div class="panel panel-info form-panel">
+	<div class="panel-heading ">
+		<center>MY FAVOURITES</center>
+	</div>
+</div> 
+
+ <div class="row">
+ 	 	<%@myfavs.each do|movie|%>
+	 		<div class="col-md-3">
+	 			<img style="border: 4px solid white;" src="<%=movie.coverpic%>"><br>
+	 		</div>
+	 	<% end %>
+ </div>
+</div>
+<br><br>
+<br><br>
+<br><br>
+
+</body>
+<nav class="navbar navbar-default bottom">
+    <center><b>AMAN CHOWDHARY - ISHTUD</b></center>
+</nav>
+
+<style>
+	body{
+		background:linear-gradient( #b3b3b0, #e3e2dd );
+	}
+	.logo{
+		color: white;
+		font-size: 20px;
+	}
+	.current_user{
+		color: white;
+	}
+	.links{
+		color: white;
+	}
  	.sub-nav{
  		background-color: lightgrey;
- 		margin-top: -20px;
+ 		margin-top: -10px;
  	}
  	a{
  		font-weight: bold;
@@ -209,6 +198,48 @@
  	}
  	.sub-nav .dropdown-menu a{
  		font-size: 15px;
+
  	} 
+ 
+
+
+ 	
+ 	.form-panel{
+ 		width: 98%;
+ 	}
+ 	.form-panel center{
+ 		font-size: 20px;
+ 		font-weight: bold;
+ 	}
+ 	.left-button{
+ 		width: 50px;
+ 		height: 50px;
+ 		background: transparent;
+ 		border:2px solid #1da2f9;
+ 		border-radius: 50%;
+ 		position: relative;
+ 		left: 50px;
+ 		top:-190px;
+ 		font-weight: bold;
+ 		font-size: 30px;
+ 	}
+ 	.right-button{
+ 		width: 50px;
+ 		height: 50px;
+ 		background: transparent;
+ 		border:2px solid #1da2f9;
+ 		border-radius: 50%;
+ 		position: relative;
+ 		right: 50px;
+ 		top:-190px;
+ 		font-weight: bold;
+ 		font-size: 30px;
+ 	}
+ 	.images{
+ 		border: 2px solid white;
+ 	}
+ 	.bottom{
+ 		margin-bottom: -10px;
+ 	}
  </style>
 

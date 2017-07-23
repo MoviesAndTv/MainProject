@@ -1,100 +1,92 @@
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-
-
-<nav class="navbar navbar-inverse navbar-fixed-top" class="navigation">
-    <div class="container-fluid" class="cont">
-    	<div class="navbar-header">
-    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        	<span class="icon-bar"></span>
-        	<span class="icon-bar"></span>
-        	<span class="icon-bar"></span> 
-      		</button>
-      		<a class="navbar-brand" href="#">MoTvTalks</a>
-    	</div>
-
-    	<form class="navbar-form navbar-left">
-  			<div class="input-group">
-    			<input type="text" class="form-control" placeholder="Search" name="movie_name">
-    			<div class="input-group-btn">
-      				<button class="btn btn-default" type="submit">
-        			<i class="glyphicon glyphicon-search"></i>
-      				</button>
-    			</div>
-  			</div>
-		</form>
-
-<<<<<<< HEAD
-		<div class="collapse navbar-collapse" id="myNavbar">
-			<ul class="nav navbar-nav navbar-right">
-      			<li class="active"><a href="#">Home</a></li>
-      			<li><a href="#">Username</a></li>
-      			<li><%=link_to"Log Out",destroy_user_session_path,method: :delete%> </li>
-    		</ul>
-    	</div>	
-    </div>
-</nav>
-=======
-			<%=mov.genres%>
-			<%=mov.duration%>
-			<%=mov.pgrating%>
-	<img src="<%=mov.coverpic%>">;
-<%end%>
-<%end%>
->>>>>>> 372edc72c55b80f4f311cf7e20d80614b70a2d78
-
-<main>
-<aside class="categories">
-	<div class="btn-group">
-			<button type="button" class="btn btn-primary">Movies</button>
-			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-		<span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-			<li><a href="#">Action</a></li>
-			<li><a href="#">Romantic</a></li>
-			<li><a href="#">Fiction</a></li>
-		</ul>
+<body>
+	<div class="header">
+		<div><br>
+			<div class="logo"><center><b style="color:white">MoTv</b></center></div>
+		</div>
+			<div class="sign_in">
+				<a href="/users/sign_in"><button class="sign_in_button"><b>Sign in</b></button></a>
+			</div>
 	</div>
-	<br>
-	<br>
-	<div class="btn-group">
-			<button type="button" class="btn btn-primary">TV Series</button>
-			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-		<span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-			<li><a href="#">Action</a></li>
-			<li><a href="#">Romantic</a></li>
-			<li><a href="#">Fiction</a></li>
-		</ul>
+	<div class="text" style="margin-top: 6%;">
+		<b >Get in Touch With Others! </b><br><br>
+		<em >Never Miss An Update.</em>
 	</div>
-	<br>
-	<br>
-	<div class="btn-group">
-			<button type="button" class="btn btn-primary">Animes</button>
-			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-		<span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-			<li><a href="#">Action</a></li>
-			<li><a href="#">Romantic</a></li>
-			<li><a href="#">Fiction</a></li>
-		</ul>
+	<div class="sign_up">
+		<a href="/users/sign_up"><button class="sign_up_button"><em><b>Start Your Journey</b></em></button></button>
 	</div>
-</aside>
-
-<div>
-	Upcoming
-</div>
-
-</main>
-<footer>
-	
-</footer>
+</body>
+<style>
+	body {
+		height: 100vh;
+		width: 100vw; 
+		background-image:url('/images.jpg');
+  		background-size:cover;
+  		margin-top: 10px;
+  		overflow: hidden;
+  }
+  .header{
+  	display: flex;
+  	justify-content: space-between;
+  }
+  .sign_in_button{
+  	margin: 30px;
+  	background: transparent;
+  	width: 130px;
+  	height: 50px;
+  	border-radius: 50%;
+  	border: 2px solid white;
+  }
+  .sign_in_button:hover{
+  	background-color: white;
+  }
+  .sign_in_button b{
+  	color: white;
+  	font-size: 20px;
+  }
+  .sign_in_button:hover b{
+  	color: black;
+  }
+  .logo{
+  	margin: 20px;
+  	height: 120px;
+  	width: 120%;
+  	border: 2px solid white;
+  	border-radius: 20px;
+  	cursor:pointer;
+  }
+  .logo a{
+  	text-decoration: none;
+  	color: white;
+  }
+  .logo b{
+  	font-size: 90px;
+  }
+  .logo:hover{
+  	background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.7))
+  }
+  .text{
+  	margin: 50px;
+  	color:white;
+  }
+  .text b{
+  	font-size: 60px;
+  }
+  .text em{
+  	font-size:30px;
+  }
+  .sign_up_button{
+  	width:240px;
+  	height: 70px;
+  	background:linear-gradient(rgba(76, 186, 219,0.2),rgba(76,186,219,0.9));
+  	color: white;
+  	font-size: 20px;
+  	margin-left: 50px;
+  	margin-top: 10px;
+  	border:3px solid white;
+  	border-radius: 50%;
+  }
+  .sign_up_button:hover{
+  	background:linear-gradient(rgba(76, 186, 219,0.9),rgba(76,186,219,0.2));
+  	
+  }
+</style>
