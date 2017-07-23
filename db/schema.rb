@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170723092750) do
+ActiveRecord::Schema.define(version: 20170723140212) do
 
   create_table "actionmovs", force: :cascade do |t|
     t.string   "name"
@@ -26,7 +26,53 @@ ActiveRecord::Schema.define(version: 20170723092750) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "comedymovs", force: :cascade do |t|
+    t.string   "name"
+    t.string   "content"
+    t.string   "rating"
+    t.string   "releasedate"
+    t.string   "duration"
+    t.string   "pgrating"
+    t.string   "coverpic"
+    t.string   "genres"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "dramamovs", force: :cascade do |t|
+    t.string   "name"
+    t.string   "content"
+    t.string   "rating"
+    t.string   "releasedate"
+    t.string   "duration"
+    t.string   "pgrating"
+    t.string   "coverpic"
+    t.string   "genres"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "fantasymovs", force: :cascade do |t|
+    t.string   "name"
+    t.string   "content"
+    t.string   "rating"
+    t.string   "releasedate"
+    t.string   "duration"
+    t.string   "pgrating"
+    t.string   "coverpic"
+    t.string   "genres"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "followusers", force: :cascade do |t|
+    t.integer  "follower_id"
+    t.integer  "followee_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "horrormovs", force: :cascade do |t|
     t.string   "name"
     t.string   "content"
     t.string   "rating"
@@ -82,6 +128,32 @@ ActiveRecord::Schema.define(version: 20170723092750) do
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
     t.text     "genres",       default: "--- []\n"
+  end
+
+  create_table "romancemovs", force: :cascade do |t|
+    t.string   "name"
+    t.string   "content"
+    t.string   "rating"
+    t.string   "releasedate"
+    t.string   "duration"
+    t.string   "pgrating"
+    t.string   "coverpic"
+    t.string   "genres"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "thrillermovs", force: :cascade do |t|
+    t.string   "name"
+    t.string   "content"
+    t.string   "rating"
+    t.string   "releasedate"
+    t.string   "duration"
+    t.string   "pgrating"
+    t.string   "coverpic"
+    t.string   "genres"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "tvs", force: :cascade do |t|
