@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170723162024) do
+ActiveRecord::Schema.define(version: 20170723162025) do
 
   create_table "actionmovs", force: :cascade do |t|
     t.string   "name"
@@ -93,6 +93,7 @@ ActiveRecord::Schema.define(version: 20170723162024) do
     t.integer  "movies_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "genre"
   end
 
   add_index "followmovies", ["movies_id"], name: "index_followmovies_on_movies_id"

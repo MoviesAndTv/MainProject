@@ -5,5 +5,9 @@
      <%=@mov.duration%>
     <%=@mov.pgrating%>
     <img src="<%=@mov.coverpic%>">
+<%if current_user.canfollow @mov.id , @movgenre%>
+    <%=link_to "unfollow" , {:controller=>"followmovies",:action=>"follow" ,:movieid=>@mov.id,:genre=>@movgenre,remote: true} ,method: :post, id: "mid"%>
 
-    <%=link_to "follow" {:controller=>"followmovie",:action=>"follow" :movieid=>@mov.id} ,method: :post%>
+    <%else%>
+        <%=link_to "follow" ,  {:controller=>"followmovies",:action=>"follow" ,:movieid=>@mov.id,:genre=>@movgenre,remote: true} ,method: :post,id:"mid"%>
+    <%end%>
