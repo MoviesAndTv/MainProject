@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170716064443) do
+ActiveRecord::Schema.define(version: 20170716132631) do
 
   create_table "movies", force: :cascade do |t|
     t.string   "name"
@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(version: 20170716064443) do
     t.string   "status"
     t.string   "officialsite"
     t.string   "language"
-    t.string   "type"
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
     t.text     "genres",       default: "--- []\n"
@@ -62,7 +61,6 @@ ActiveRecord::Schema.define(version: 20170716064443) do
   create_table "tvs", force: :cascade do |t|
     t.string   "name"
     t.text     "content"
-    t.string   "rating"
     t.string   "releasedate"
     t.string   "duration"
     t.string   "pgrating"
