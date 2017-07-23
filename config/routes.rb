@@ -23,6 +23,7 @@ Rails.application.routes.draw do
  # post 'users/sign_up'=>'devise/sessions#create'
 
   get '/genre' => 'users#genre'
+  get '/index' => 'movies#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

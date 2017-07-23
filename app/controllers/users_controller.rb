@@ -50,36 +50,46 @@ class UsersController < ApplicationController
 # end
 
 @mov
+@movgenre
   	genre=params["genre"]
   	tp=params["type"]
     if (tp=='m')
       if genre=="Action"
 @mov=Actionmov.all
+@movgenre="Action"
       end
        if genre=="Comedy"
 @mov=Comedymov.all
+@movgenre="Comedy"
       end
        if genre=="Thriller"
 @mov=Thrillermov.all
+@movgenre="Thriller"
       end
        if genre=="Romance"
 @mov=Romancemov.all
+@movgenre="Romance"
       end
        if genre=="Sci-Fi"
 @mov=Scifimov.all
+@movgenre="Sci-Fi"
       end
         if genre=="Drama"
 @mov=Dramamov.all
+@movgenre="Drama"
       end
        if genre=="Horror"
 @mov=Horrormov.all
+@movgenre="Horror"
       end
        if genre=="Fantasy"
 @mov=Fantasymov.all
+@movgenre="Fantasy"
       end
 
    if genre=="Crime"
 @mov=Crimemov.all
+@movgenre="Crime"
       end
     end
 #     if(tp=='m')

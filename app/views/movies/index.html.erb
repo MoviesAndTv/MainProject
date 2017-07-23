@@ -1,0 +1,9 @@
+ <%=@mov.name%>
+     <%=@mov.content%>
+     <%=@mov.rating%>
+         <%=@mov.releasedate%>
+     <%=@mov.duration%>
+    <%=@mov.pgrating%>
+    <img src="<%=@mov.coverpic%>">
+
+    <%=link_to "follow" {:controller=>"followmovie",:action=>"follow" :movieid=>@mov.id} ,method: :post%>

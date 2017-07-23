@@ -1,4 +1,5 @@
 class FollowmoviesController < ApplicationController
-  def index
+  def follow
+  	
   end
 end

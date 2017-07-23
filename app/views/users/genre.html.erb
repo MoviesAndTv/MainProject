@@ -1,6 +1,5 @@
 
 <% @mov.each do |m|%>
-<%= m.name%>
-
+<%=link_to m.name,{:controller=> 'movies' ,:action=>"index",id: m.id,genre: @movgenre} ,method: :get%>
 <br>
 <%end%>
