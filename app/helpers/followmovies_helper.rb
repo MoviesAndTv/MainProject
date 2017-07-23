@@ -1,0 +1,2 @@
+module FollowmoviesHelper
+end

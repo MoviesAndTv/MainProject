@@ -23,7 +23,19 @@ class UsersController < ApplicationController
 # gen.each do |ger|
 #   if ger=="Thriller"
 
-#     actionmov=Thrillermov.new
+# <<<<<<< HEAD
+# #     actionmov=Thrillermov.new
+# =======
+#    mo.genres.gsub!("\"","")
+#         mo.genres.gsub!("[","")
+#         mo.genres.gsub!("]","")
+#         mo.genres.gsub!(" ","")
+#         gen=mo.genres.split(',')  
+# gen.each do |ger|
+#   if ger=="Crime"
+
+#     actionmov=Crimemov.new
+# >>>>>>> 304c28524830784247fe92eba2b279ce37913ced
    
 #     actionmov.name=mo.name;
 #     actionmov.content=mo.content;
