@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170723161341) do
+ActiveRecord::Schema.define(version: 20170723162024) do
 
   create_table "actionmovs", force: :cascade do |t|
     t.string   "name"
@@ -38,6 +38,17 @@ ActiveRecord::Schema.define(version: 20170723161341) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "users_id"
+    t.integer  "movies_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["movies_id"], name: "index_comments_on_movies_id"
+  add_index "comments", ["users_id"], name: "index_comments_on_users_id"
 
   create_table "crimemovs", force: :cascade do |t|
     t.string   "name"
@@ -77,6 +88,16 @@ ActiveRecord::Schema.define(version: 20170723161341) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "followmovies", force: :cascade do |t|
+    t.integer  "users_id"
+    t.integer  "movies_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "followmovies", ["movies_id"], name: "index_followmovies_on_movies_id"
+  add_index "followmovies", ["users_id"], name: "index_followmovies_on_users_id"
+
   create_table "followusers", force: :cascade do |t|
     t.integer  "follower_id"
     t.integer  "followee_id"
@@ -96,6 +117,16 @@ ActiveRecord::Schema.define(version: 20170723161341) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "like_comments", force: :cascade do |t|
+    t.integer  "users_id"
+    t.integer  "comments_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "like_comments", ["comments_id"], name: "index_like_comments_on_comments_id"
+  add_index "like_comments", ["users_id"], name: "index_like_comments_on_users_id"
 
   create_table "movies", force: :cascade do |t|
     t.string   "name"

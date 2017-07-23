@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'likecomments/index'
+
+  get 'comments/index'
+
+  get 'followmovies/index'
+
   get 'followusers/index'
 
   devise_for :users
